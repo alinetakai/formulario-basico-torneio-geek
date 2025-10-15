@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário Inteligente</title>
+  <link rel="shortcut icon" href="https://i.postimg.cc/YCk1KfM8/form-favicon.png" type="image/png">
+</head>
+<body>
+  <h1>Cadastro no Torneio Geek</h1>
+
+  <form autocomplete="on">
+    
+    <fieldset>
+      <legend>Informações Pessoais</legend>
+
+      <!-- autofocus e required -->
+      <label>
+        Nome Completo:
+        <input type="text" name="nome" placeholder="Digite seu nome" required autofocus>
+      </label>
+      <br><br>
+
+      <!-- pattern e maxlength -->
+      <label>
+        Nickname (3 a 10 letras, sem espaços):
+        <input type="text" name="nick" maxlength="10" pattern="[A-Za-z]{3,10}" title="Use apenas letras, de 3 a 10 caracteres.">
+      </label>
+      <br><br>
+
+      <!-- value pré-definido -->
+      <label>
+        País:
+        <input type="text" name="pais" value="Brasil" readonly>
+      </label>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Informações da Conta</legend>
+
+      <!-- e-mail e autocomplete -->
+      <label>
+        E-mail:
+        <input type="email" name="email" placeholder="exemplo@email.com" required autocomplete="email">
+      </label>
+      <br><br>
+
+      <!-- min e max -->
+      <label>
+        Idade:
+        <input type="number" name="idade" min="10" max="100" required>
+      </label>
+      <br><br>
+
+      <!-- senha desativada -->
+      <label>
+        Senha temporária:
+        <input type="password" value="123456" disabled>
+      </label>
+    </fieldset>
+
+    <br>
+
+    <button type="submit">Enviar Cadastro</button>
+  </form>
+</body>
+</html>
